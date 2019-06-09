@@ -1,19 +1,27 @@
 var html = '';
-var red;
-var green;
-var blue;
+
 var rgbColor;
+function makeColors(){
+   var random = Math.floor(Math.random() * 256 ); 
+    return random;
+}
 
 for (var i = 0; i <= 10; i ++){
-
-    red = Math.floor(Math.random() * 256 );
-    green = Math.floor(Math.random() * 256 );
-    blue = Math.floor(Math.random() * 256 );
-    rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+   
+   
+    rgbColor = 'rgb(' + makeColors() + ',' + makeColors() + ',' + makeColors() + ')';
     html += '<div id="circle" style="background-color:' + rgbColor +  '">'+i+'</div>';
 
 
 }
+
+for (var p=0; p<=50; p++){
+    console.log(p%2)
+
+}
+
+
+
 
 
 document.write(html);
